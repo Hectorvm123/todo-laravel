@@ -13,10 +13,9 @@ add('writable_dirs', ['bootstrap/cache', 'storage']);
 
 // Hosts
 
-host('54.211.160.170')
-    ->set('remote_user', 'prod-ud4-deployer')
+host('54.211.160.170')->user('prod-ud4-deployer')
+    ->identityFile('~/.ssh/id_rsa')
     ->set('ssh_multiplexing', false)
-    ->set('identityFile', 'C:\Users\HECTOR\.ssh\id_rsa')
     ->set('deploy_path', '/var/www/prod-ud4-a4/html/todo-laravel');
 
 // Hooks
