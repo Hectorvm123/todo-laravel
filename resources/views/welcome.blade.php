@@ -25,11 +25,11 @@
 <body class="bg-gray-100">
     <div class="w-3/4 mx-auto">
         <x-success-message class="my-4" />
-        
+
         <a href="/">Home</a>
 
         {{-- create todo --}}
-        <x-card title="To-do desplegado por Hector Valls Mira">
+        <x-card title="To-do desplegado por Jose Enrique Pardo">
             <form
                 action="{{ $model->exists ? route('todo.update', $model->id) : route('todo.store') }}"
                 method="POST"

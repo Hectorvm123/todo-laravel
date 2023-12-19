@@ -13,7 +13,7 @@ add('writable_dirs', ['bootstrap/cache', 'storage']);
 
 // Hosts
 
-host('23.20.186.156')
+host('54.211.160.170')
     ->set('remote_user', 'prod-ud4-deployer')
     ->set('ssh_multiplexing', false)
     ->set('identityFile', 'C:\Users\HECTOR\.ssh\id_rsa')
@@ -26,9 +26,9 @@ after('deploy:failed', 'deploy:unlock');
 task('upload:env', function () {
     upload('.env.production', '{{deploy_path}}/shared/.env');
    })->desc('Environment setup');
-   
 
-      
+
+
 
 # Declaració de la tasca
 task('reload:php-fpm', function () {
